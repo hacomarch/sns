@@ -30,7 +30,16 @@ spring:
     port: 6379
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
     show-sql: true
+    properties:
+        format_sql: true
+
+jwt:
+  secret-key: haco.sns-application-2022.secret_key
+  # 30 days
+  token:
+    expired-time-ms: 2592000000
 ---
 
