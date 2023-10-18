@@ -14,7 +14,7 @@ import java.time.Instant;
 @Table(name = "user")
 @Getter
 @Setter
-@SQLDelete(sql = "UPDATED user SET deleted_at = NOW() where id=?")
+@SQLDelete(sql = "UPDATE user SET deleted_at = NOW() where id=?")
 @Where(clause = "deleted_at is NULL") //null인 행만 가져오기 == 삭제되지 않은 항목만 검색
 public class UserEntity {
 
