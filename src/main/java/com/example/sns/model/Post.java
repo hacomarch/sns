@@ -24,7 +24,7 @@ public class Post {
 
     private Timestamp deletedAt;
 
-    public static Post formEntity(PostEntity entity) {
+    public static Post fromEntity(PostEntity entity) {
         return new Post(
                 entity.getId(),
                 entity.getTitle(),
